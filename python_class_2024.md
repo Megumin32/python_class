@@ -109,9 +109,9 @@ Visual Studio Code（VSCode）は、以下の理由でプログラミングに�
 2. 新しいファイル名を **`hello.py`** のように入力し、Enterキーを押します。
 
 #### プログラムの実行
-1. `hello.py` ファイルを開き、次のコードを入力します。
+1. ファイルを開き、次のコードを入力します。
 
-    ``` Python
+    ``` Python:hello.py
     print("Hello, World!")
     ```
 
@@ -125,8 +125,7 @@ Visual Studio Code（VSCode）は、以下の理由でプログラミングに�
 
 Pythonでプログラムを実行するとき、結果を画面に表示するために最も基本的な方法が `print()` 関数です。`print()` 関数は、指定したテキストや値をコンソールに出力するために使用されます。
 
-**`example1_2_1.py`**
-``` Python
+``` Python:example1_2_1.py
 print("Hello, World!")  # 画面に "Hello, World!" と表示されます
 ```
 **`example1_2_2.py`**
