@@ -172,7 +172,7 @@ print("コメントは表示されません")  # ここでメッセージを表�
 `print()` 関数を使って，次のように改行を含む文章を表示しなさい．
 ```
 1 + 2
-=3
+= 3
 ```
 
 <br/><br/><br/><br/><br/><div style="page-break-before:always"></div>
@@ -623,6 +623,27 @@ if x > 5:
 
 この例では，x が 5 より大きい場合に，「x は 5 より大きいです．」と表示されます．
 
+### インデントについて
+Pythonでは，if 文の条件が満たされたときに実行されるコードの範囲を示すために，**インデント**（字下げ）を使います．インデントとは，コードの先頭にスペースを入れて，他の部分と区別することを指します．インデントは`Tab` キーで入力します．
+
+インデントを使うことで，**どの部分のコードが条件に基づいて実行されるか**を明確に示すことができます．Pythonでは，このインデントが非常に重要です．インデントを間違えると，プログラムが正しく動作しなかったり，エラーが発生したりします．
+
+例えば，次のように書かれた if 文を考えてみましょう．
+
+#### example_5_1_2.py
+``` python
+x = 10
+
+if x > 5:
+    print("xは5より大きい")
+print("この文は条件に関係なく実行される")
+```
+
+上記のコードでは，`if x > 5:` の条件が真（True）である場合，インデントされた行 
+`print("xは5より大きい"）`が実行されます．インデントされていない最後の print 文は，if 文の条件に関係なく実行されます．
+
+インデントはPythonのコード構造を示す重要な要素であり，コードが正しく動作するために不可欠です．正しいインデントを身につけることで，複雑なプログラムも理解しやすくなります．
+
 ## 5.2 if-else文
 if-else 文は，条件が偽（False）の場合に別のコードブロックを実行するために使用します．
 
@@ -802,7 +823,7 @@ while True:
 ``` Python
 # 引数も戻り値もない関数
 def template():
-    print("親愛なる川上様")
+    print("親愛なる一条様")
 
 greet() # greet関数を呼び出し
 ```
@@ -813,7 +834,7 @@ greet() # greet関数を呼び出し
 def template(name):
     print("親愛なる" + name + "様")
 
-greet("田中") # "田中"を引数としてtemplate関数を呼び出し
+greet("二条") # "二条"を引数としてtemplate関数を呼び出し
 ```
 
 #### example_7_2_3.py
@@ -822,7 +843,16 @@ greet("田中") # "田中"を引数としてtemplate関数を呼び出し
 def template(name):
     return "親愛なる" + name + "様"
 
-print(template("川上") + "，お世話になっております．")
+print(template("三条") + "，お世話になっております．")
+```
+
+#### example_7_2_4.py
+``` python
+# 引数が複数ある関数
+def sum(a,b):
+    return a + b
+
+print(sum(2,3))
 ```
 
 ## 7.3 デフォルト引数
@@ -832,10 +862,10 @@ print(template("川上") + "，お世話になっております．")
 #### example_7_3_1.py
 ``` Python
 def greet(name="Guest"):
-    print(f"Hello, {name}!")
+    print("Hello" + name )
 
-greet()  # "Hello, Guest!" と表示されます
-greet("Alice")  # "Hello, Alice!" と表示されます
+greet()  # "Hello, Guest" と表示されます
+greet("Alice")  # "Hello, Alice" と表示されます
 ```
 
 ## 7.4 【発展】再帰的定義
@@ -918,13 +948,13 @@ global キーワードを使用しないと，関数内で同じ名前の変数�
 ## 第7章の演習問題
 
 #### practice_7_1.py
-2 つの数値を引数として受け取り，その和を返す関数 add_numbers を定義し，数値 7 と 3 を引数として呼び出してその結果を表示するプログラムを書きなさい．
+整数を引数として受け取り，その整数を 2 倍にして返す関数 `double_number` を定義しなさい．関数の定義と，その関数を使った呼び出しを含めたプログラムを書いてください．
 
 #### practice_7_2.py
-名前を引数に取り，デフォルトで "ゲスト" を設定する関数 greet_user を定義し，名前を指定して呼び出す場合と指定しない場合の両方で結果を表示するプログラムを書きなさい．
+3 つの整数を引数として受け取り，その最大値を返す関数 `find_max` を定義しなさい．この関数を使って，任意の 3 つの整数の最大値を求め，表示するプログラムを書いてください．
 
 #### practice_7_3.py
-2 つの数値を引数として受け取り，その積と商を返す関数 multiply_and_divide を定義し，数値 12 と 4 を引数として呼び出してその結果を表示するプログラムを書きなさい．
+1 つの整数を引数として受け取り，その数を 2 倍にして返す関数 `multiply` を定義しなさい．ただし，引数が与えられなかった場合，デフォルトでその数を 1 とするようにしてください．この関数を使って，引数あり・なしの両方のケースで結果を確認するプログラムを書いてください．
 
 <br/><br/><br/><br/><br/><div style="page-break-before:always"></div>
 
@@ -937,31 +967,22 @@ global キーワードを使用しないと，関数内で同じ名前の変数�
 
 
 ## 8.2 mathモジュール
-math モジュールは，数学的な関数や定数を提供します．さまざまな数学的な操作を行うために使用できます．
+`math` モジュールは，数学的な関数や定数を提供します．さまざまな数学的な操作を行うために使用できます．
 
 ### 主な関数と定数
 `math.sqrt(x)`: 数値 x の平方根を返します．
+`math.factorial(x)`: x の階乗を返します．
+`math.pi`: 円周率（π）を返します．
 
 #### example_8_2_1.py
 ``` python
 import math
-result = math.sqrt(16)  # 4.0
-```
 
-`math.factorial(x)`: x の階乗を返します．
+value1 = math.sqrt(16)  
+value2 = math.factorial(5)
+value3 = math.pi
 
-#### example_8_2_2.py
-``` python
-import math
-result = math.factorial(5)  # 120
-```
-
-`math.pi`: 円周率（π）を返します．
-
-#### example_8_2_3.py
-``` python
-import math
-pi_value = math.pi  # 約 3.14159
+print(value1, value2, value3)
 ```
 
 ## 8.3 randomモジュール
@@ -969,29 +990,22 @@ random モジュールは，乱数を生成するための機能を提供しま�
 
 #### 主な関数
 `random.random()`: 0.0 以上 1.0 未満のランダムな浮動小数点数を返します．
+`random.randint(a, b)`: 指定した範囲 [a, b] の整数をランダムに返します．
+`random.choice(sequence)`: シーケンス（リストなど）からランダムに要素を選びます．
 
 #### example_8_3_1.py
 ``` python
 import random
-random_value = random.random()  # 例: 0.37444887175646646
-```
 
-`random.randint(a, b)`: 指定した範囲 [a, b] の整数をランダムに返します．
+value1 = random.random()  
+value2 = random.randint(1, 10)  
 
-#### example_8_3_2.py
-``` python
-import random
-random_int = random.randint(1, 10)  # 例: 7
-```
-
-`random.choice(sequence)`: シーケンス（リストなど）からランダムに要素を選びます．
-
-#### example_8_3_3.py
-``` python
-import random
 choices = ['apple', 'banana', 'cherry']
-random_choice = random.choice(choices)  # 例: 'banana'
+value3 = random.choice(choices) 
+
+print(value1, value2, value3)
 ```
+
 ## 8.4 モジュールのインポート方法
 モジュールを使用するには，import 文を使ってインポート[^8]します．インポートしたモジュールの関数や変数を，モジュール名をプレフィックス[^9]として使用します．
 [^8]:他のところにある機能やデータを持ってくること
@@ -1159,10 +1173,13 @@ print("推定円周率: ", estimate)
 サイコロを 100 回振り，各目が出る頻度をカウントして表示するプログラムを書きなさい．
 
 #### practice_9_2.py
-モンテカルロシミュレーションを用いて，円の面積を求める精度を上げるために，サンプル数を 1000 回と 10000 回で実行し，結果を比較して表示するプログラムを書きなさい．
+ある町の初期人口が1000人で，毎年2%ずつ増加するという設定で，10年間の人口変化をシミュレーションしなさい．各年の人口をリストに記録し，最終的な人口を表示するプログラムを書いてください．
 
 #### practice_9_3.py
-エージェントがランダムに移動する2次元グリッドをシミュレーションし，エージェントが指定された目標位置に到達するまでの移動回数をカウントするプログラムを書きなさい．
+プレイヤーが毎回100円を賭け，2倍の確率で50円を失い，1倍の確率で200円を獲得するゲームを100回行うシミュレーションを作成し，最終的な利益と損失を表示するプログラムを書いてください．
+
+#### practice_9_4.py
+ある町で感染症が広がり，毎日人口の5%が新たに感染するというモデルを作成しなさい．最初の感染者数が10人，町の総人口が1000人で，10日間の感染者数の推移をシミュレーションしなさい．各日の感染者数を表示するプログラムを書いてください．
 
 <br/><br/><br/><br/><br/><div style="page-break-before:always"></div>
 
@@ -1199,7 +1216,7 @@ print(a + str(b))
 1から5までの整数を順に表示するプログラムを for ループを使って書いてください．
 
 #### exercise_08.py
-数字を引数として受け取り，その数値の平方を計算して返す関数 square を定義し，関数を使って 4 の平方を計算して表示するプログラムを書いてください．
+数字を引数として受け取り，その数値の平方を計算して返す関数 `square` を定義し，関数を使って 4 の平方を計算して表示するプログラムを書いてください．
 
 ## 中級編
 #### exercise_09.py
@@ -1212,33 +1229,33 @@ print(a + str(b))
 1から20までの整数の中で，5で割り切れる数だけを表示するプログラムを書いてください．
 
 #### exercise_12.py
-2つの数値を引数として受け取り，その和と積を返す関数 sum_and_product を定義し，関数を使って 3 と 4 の和と積を表示するプログラムを書いてください．
+2つの数値を引数として受け取り，その和と積を返す関数 `sum_and_product` を定義し，関数を使って 3 と 4 の和と積を表示するプログラムを書いてください．
 
 #### exercise_13.py
-math モジュールを使って，任意の角度（度数）をラジアンに変換し，そのサイン値を表示するプログラムを書いてください．角度はユーザーからの入力としてください．
+`math` モジュールを使って，任意の角度（度数）をラジアンに変換し，そのサイン値を表示するプログラムを書いてください．角度はユーザーからの入力としてください．
 
 ## 上級編
 #### exercise_14.py
 数字のリスト [34, 7, 23, 32, 5] を昇順にソートし，ソート結果を表示するプログラムを作成してください．
 
 #### exercise_15.py
-2つの整数を受け取り，その最大公約数（GCD）を求める関数 gcd を定義し，ユーザーから入力された2つの整数のGCDを表示するプログラムを書いてください．
+2つの整数を受け取り，その最大公約数（GCD）を求める関数 `gcd` を定義し，ユーザーから入力された2つの整数のGCDを表示するプログラムを書いてください．
 
 #### exercise_16.py
-テキストファイル data.txt を作成し，ファイルに「Hello, Python!」と書き込むプログラムを書いてください．その後，ファイルから内容を読み込み，表示するプログラムも作成してください．
+整数のリストが与えられたとき，そのリストのうち偶数だけを二乗し，新しいリストとして返すプログラムをリスト内包表記を使って作成しなさい．
 
 #### exercise_17.py
-Person というクラスを定義し，名前と年齢を属性として持つオブジェクトを作成してください．クラスには自己紹介をするメソッド introduce を定義し，オブジェクトの属性を使って自己紹介を表示するプログラムを書いてください．
+任意の辞書 data_dict とキー key が与えられたとき、そのキーに対応する値を辞書から削除し、残った辞書を返す関数 remove_key(data_dict, key) を作成しなさい。削除するキーが辞書に存在しない場合は、そのまま辞書を返すようにしなさい。
 
 #### exercise_18.py
-サイコロの目をシミュレートするプログラムを作成してください．サイコロを 100 回振り，各目の出現回数を表示するプログラムを書いてください．サイコロの目は1から6までの整数です．
+ユーザーが1から10までの整数を予想し，プログラムがランダムに選んだ数と一致するかどうかを判定するゲームを作成しなさい．プログラムは，ユーザーが正しい数を当てるまで繰り返し予想を促すようにしなさい．
 
 ## 挑戦
 #### exercise_19.py
-CSVファイル sales_data.csv に売上データ（例：日付, 売上高）を保存し，Pythonでこのファイルを読み込んで，売上高の合計を計算して表示するプログラムを作成してください．
+任意の 10 進数が与えられたとき，16 進数に変換して画面に表示するプログラムを作成しなさい．また，任意の n 進数を m 進数に変換して表示するプログラムを作成しなさい．ただし，n，m は 2 以上 16 以下の整数とする．
 
 #### exercise_20.py
-ユーザーが1から10までの整数を予想し，プログラムがランダムに選んだ数と一致するかどうかを判定するゲームを作成してください．プログラムは，ユーザーが正しい数を当てるまで繰り返し予想を促します．
+2次元平面上で，ある点がランダムに上下左右のいずれかに移動するランダムウォークを1000ステップ行うシミュレーションを作成しなさい．シミュレーション終了後に，最初の位置からの距離を計算するプログラムを書いてください．
 
 <br/><br/><br/><br/><br/><div style="page-break-before:always"></div>
 
@@ -1481,78 +1498,111 @@ print("最大公約数 =", result)
 
 #### exercise_16.py_解答例 
 ``` python
-# ファイルに書き込む
-with open('data.txt', 'w') as file:
-    file.write('Hello, Python!')
+# 整数のリスト
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# ファイルから読み込む
-with open('data.txt', 'r') as file:
-    content = file.read()
+# 偶数の二乗のみをリスト内包表記で新しいリストにする
+squared_evens = [x**2 for x in numbers if x % 2 == 0]
 
-# 結果の表示
-print("ファイルの内容 =", content)
+# 結果を表示
+print(f"偶数の二乗: {squared_evens}")
 ```
 
 #### exercise_17.py_解答例 
 ``` python
-# Personクラスの定義
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+def remove_key(data_dict, key):
+    # キーが存在する場合、削除
+    if key in data_dict:
+        del data_dict[key]
+    return data_dict
 
-    def introduce(self):
-        return f"こんにちは，私の名前は{self.name}で，年齢は{self.age}歳です．"
+# サンプルの辞書
+data_dict = {'a': 1, 'b': 2, 'c': 3}
 
-# Personオブジェクトの作成と自己紹介の表示
-person = Person("太郎", 16)
-print(person.introduce())
+# ユーザーから削除したいキーを入力
+key_to_remove = input("削除したいキーを入力してください: ")
+
+# 辞書からキーを削除
+updated_dict = remove_key(data_dict, key_to_remove)
+
+# 結果を表示
+print(f"更新された辞書: {updated_dict}")
+
 ```
 
 #### exercise_18.py_解答例 
 ``` python
 import random
 
-# サイコロの目をシミュレート
-rolls = [0] * 6
+# 1から10までのランダムな整数を生成
+correct_number = random.randint(1, 10)
 
-for _ in range(100):
-    roll = random.randint(1, 6)
-    rolls[roll - 1] += 1
-
-# 結果の表示
-for i, count in enumerate(rolls, start=1):
-    print(f"目 {i}: {count} 回")
+while True:
+    # ユーザーから予想を入力
+    guess = int(input("1から10までの数を予想して入力してください: "))
+    
+    # 予想が正しいか確認
+    if guess == correct_number:
+        print("正解です！")
+        break
+    else:
+        print("不正解です。もう一度予想してください。")
 ```
 
 #### exercise_19.py_解答例 
 ``` python
-import csv
+# 10進数から16進数に変換する関数
+def dec_to_hex(n):
+    return hex(n)[2:]
 
-# CSVファイルの読み込み
-total_sales = 0
-with open('sales_data.csv', 'r') as file:
-    reader = csv.reader(file)
-    next(reader)  # ヘッダー行をスキップ
-    for row in reader:
-        total_sales += float(row[1])
+# 任意の10進数を入力
+decimal_number = int(input("10進数を入力してください: "))
 
-# 結果の表示
-print("売上高の合計 =", total_sales)
+# 16進数に変換して表示
+hex_number = dec_to_hex(decimal_number)
+print(f"{decimal_number} の16進数は {hex_number.upper()} です。")
+
+# 任意のn進数をm進数に変換する関数
+def base_n_to_m(number, n, m):
+    # n進数を10進数に変換
+    decimal_value = int(number, n)
+    # 10進数をm進数に変換
+    return format(decimal_value, f'{m}').upper()
+
+# ユーザーから数値と基数を入力
+number = input(f"n進数の数値を入力してください: ")
+n = int(input("入力された数値の基数 n を入力してください (2-16): "))
+m = int(input("変換後の基数 m を入力してください (2-16): "))
+
+# m進数に変換して表示
+converted_number = base_n_to_m(number, n, m)
+print(f"{n}進数の {number} は、{m}進数で {converted_number} です。")
+
 ```
 
 #### exercise_20.py_解答例 
 ``` python
 import random
+import math
 
-print("1から10までの整数を予想してください．")
-correct_number = random.randint(1, 10)
+# 初期位置
+x, y = 0, 0
 
-while True:
-    guess = int(input("予想を入力してください: "))
-    if guess == correct_number:
-        print("正解です！")
-        break
-    else:
-        print("違います．もう一度試してください．")
+# ランダムウォークのシミュレーションを1000ステップ行う
+for _ in range(1000):
+    direction = random.choice(['up', 'down', 'left', 'right'])
+    if direction == 'up':
+        y += 1
+    elif direction == 'down':
+        y -= 1
+    elif direction == 'left':
+        x -= 1
+    elif direction == 'right':
+        x += 1
+
+# 最初の位置からの距離を計算
+distance = math.sqrt(x**2 + y**2)
+
+# 結果を表示
+print(f"最初の位置からの距離: {distance:.2f}")
 ```
