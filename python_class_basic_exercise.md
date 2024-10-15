@@ -1,5 +1,5 @@
 
-# Pythonプログラミング入門ver1.0_演習問題
+# Pythonプログラミング入門_演習問題ver1.0
 
 #### exercise01.py
 "Hello, Python!" を表示するプログラムを作成しなさい。
