@@ -24,7 +24,7 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="pythonプログラミングbasic_ver10">Pythonプログラミングbasic_ver1.0 </h1>
+<h1 id="pythonプログラミングbasic_ver12">Pythonプログラミングbasic_ver1.2 </h1>
 <h2 id="はじめに">はじめに </h2>
 <p>このテキストは，プログラミングの基礎を学ぶためのものです．初めてのプログラミングは難しく感じるかもしれませんが，一歩ずつ進めば習得できます．基本から応用まで順を追って学び，プログラムを動かす楽しさを体験してください．自分のペースで学び，疑問があれば周りに相談しながら進んでいきましょう．この学びが，皆さんの未来につながることを願っています．</p>
 <hr>
@@ -157,23 +157,21 @@
 <p>これらのステップを繰り返すことで，基礎から応用まで段階的にPythonを学び，しっかりとスキルを身につけることができます．頑張って学習を進めていきましょう！</p>
 <hr>
 <h2 id="第1章-基本的な出力">第1章 基本的な出力 </h2>
-<h3 id="第1節-print関数">第1節 Print関数 </h3>
-<h4 id="11-print関数の使い方">1.1 Print関数の使い方 </h4>
+<h3 id="第1節-print関数">第1節 print関数 </h3>
+<h4 id="11-print関数の使い方">1.1 print関数の使い方 </h4>
 <p>Print関数は，Pythonでコンソールに出力を表示するために使用されます．以下は，基本的なPrint関数の使い方です．</p>
 <h5 id="example1_01py">example1_01.py </h5>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"This is a simple print statement."</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span> <span class="token comment">#=&gt; Hello, World!</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span> <span class="token comment">#=&gt; 123</span>
 </code></pre><h5 id="複数の値の出力">複数の値の出力 </h5>
 <p>Print関数は，複数の値をコンマで区切って出力することができます．</p>
 <h5 id="example1_02py">example1_02.py </h5>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"The sum of 5 and 3 is"</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"The sum of 5 and 3 is"</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment">#=&gt; The sum of 5 and 3 is 8</span>
 </code></pre><h4 id="節末問題">節末問題 </h4>
 <h5 id="question1_01py">question1_01.py </h5>
-<p>以下のコードを修正して，"Hello, World! The sum is 8." と表示されるようにしなさい．</p>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"The sum is"</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<p>以下のコードの2つのprint文を1つにまとめ，"2 to the 20th power is [結果]"と表示されるようにしなさい．</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"2 to the 20th power is"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">**</span> <span class="token number">20</span><span class="token punctuation">)</span>
 </code></pre><h3 id="第2節-コメントアウト">第2節 コメントアウト </h3>
 <h4 id="21-コメントの使い方">2.1 コメントの使い方 </h4>
 <p>コメントはコード内にメモや説明を追加するために使用します．コメントはPythonのインタープリタに無視され，コードの実行に影響を与えません．</p>
@@ -215,8 +213,9 @@ total <span class="token operator">=</span> <span class="token number">0</span>
 <p>以下の条件に従ってプログラムを作成しなさい．</p>
 <ol>
 <li>画面に"Hello, World!"と表示させる．</li>
-<li>2つの異なる数値をPrint関数を使用して表示させる．</li>
+<li>2つの異なる数値をprint関数を使用して表示させる．</li>
 <li>これらの数値の和について，"The total is: [合計値]"と表示させる．</li>
+<li>プログラムの中に「これは章末問題です」というメモ書き（コメントアウト）をせよ．</li>
 </ol>
 <hr>
 <h2 id="第2章-数値計算と変数の型外部からの入力">第2章 数値計算と変数の型，外部からの入力 </h2>

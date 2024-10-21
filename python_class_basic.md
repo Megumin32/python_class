@@ -1,4 +1,4 @@
-# Pythonプログラミングbasic_ver1.1
+# Pythonプログラミングbasic_ver1.2
 
 ## はじめに
 
@@ -118,18 +118,16 @@ Colabノートブックは，Google Driveを通じて他のユーザーと共有
 
 ## 第1章 基本的な出力
 
-### 第1節 Print関数
+### 第1節 print関数
 
-#### 1.1 Print関数の使い方
+#### 1.1 print関数の使い方
 
 Print関数は，Pythonでコンソールに出力を表示するために使用されます．以下は，基本的なPrint関数の使い方です．
 
 ##### example1_01.py
 ``` python
-print("Hello, World!")
-print("This is a simple print statement.")
-print(123)
-print(3.14)
+print("Hello, World!") #=> Hello, World!
+print(123) #=> 123
 ```
 
 ##### 複数の値の出力
@@ -138,16 +136,16 @@ Print関数は，複数の値をコンマで区切って出力することがで
 
 ##### example1_02.py
 ``` python
-print("The sum of 5 and 3 is", 5 + 3)
+print("The sum of 5 and 3 is", 5 + 3) #=> The sum of 5 and 3 is 8
 ```
 
 #### 節末問題
 
 ##### question1_01.py
-以下のコードを修正して，"Hello, World! The sum is 8." と表示されるようにしなさい．
+以下のコードの2つのprint文を1つにまとめ，"2 to the 20th power is [結果]"と表示されるようにしなさい．
 ``` python
-print("Hello")
-print("The sum is", 5 + 3)
+print("2 to the 20th power is")
+print(2 ** 20)
 ```
 
 ### 第2節 コメントアウト
@@ -213,9 +211,9 @@ print(total) 合計値を表示します．
 ##### practice1_01.py
 以下の条件に従ってプログラムを作成しなさい．
  1. 画面に"Hello, World!"と表示させる．
- 2. 2つの異なる数値をPrint関数を使用して表示させる．
+ 2. 2つの異なる数値をprint関数を使用して表示させる．
  3. これらの数値の和について，"The total is: [合計値]"と表示させる．
-
+ 4. プログラムの中に「これは章末問題です」というメモ書き（コメントアウト）をせよ．
 ---
 
 ## 第2章 数値計算と変数の型，外部からの入力
