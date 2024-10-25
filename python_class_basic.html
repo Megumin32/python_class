@@ -24,7 +24,7 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="pythonプログラミングbasic_ver10">Pythonプログラミングbasic_ver1.0 </h1>
+<h1 id="pythonプログラミングbasic_ver14">Pythonプログラミングbasic_ver1.4 </h1>
 <h2 id="はじめに">はじめに </h2>
 <p>このテキストは，プログラミングの基礎を学ぶためのものです．初めてのプログラミングは難しく感じるかもしれませんが，一歩ずつ進めば習得できます．基本から応用まで順を追って学び，プログラムを動かす楽しさを体験してください．自分のペースで学び，疑問があれば周りに相談しながら進んでいきましょう．この学びが，皆さんの未来につながることを願っています．</p>
 <hr>
@@ -157,23 +157,21 @@
 <p>これらのステップを繰り返すことで，基礎から応用まで段階的にPythonを学び，しっかりとスキルを身につけることができます．頑張って学習を進めていきましょう！</p>
 <hr>
 <h2 id="第1章-基本的な出力">第1章 基本的な出力 </h2>
-<h3 id="第1節-print関数">第1節 Print関数 </h3>
-<h4 id="11-print関数の使い方">1.1 Print関数の使い方 </h4>
-<p>Print関数は，Pythonでコンソールに出力を表示するために使用されます．以下は，基本的なPrint関数の使い方です．</p>
+<h3 id="第1節-print関数">第1節 <code>print</code>関数 </h3>
+<h4 id="11-print関数の使い方">1.1 <code>print</code>関数の使い方 </h4>
+<p><code>print</code>関数は，Pythonでコンソールに出力を表示するために使用されます．以下は，基本的な<code>print</code>関数の使い方です．</p>
 <h5 id="example1_01py">example1_01.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"This is a simple print statement."</span><span class="token punctuation">)</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span>
 </code></pre><h5 id="複数の値の出力">複数の値の出力 </h5>
-<p>Print関数は，複数の値をコンマで区切って出力することができます．</p>
+<p><code>print</code>関数は，複数の値をカンマで区切って出力することができます．</p>
 <h5 id="example1_02py">example1_02.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"The sum of 5 and 3 is"</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span>
 </code></pre><h4 id="節末問題">節末問題 </h4>
 <h5 id="question1_01py">question1_01.py </h5>
-<p>以下のコードを修正して，"Hello, World! The sum is 8." と表示されるようにしなさい．</p>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"The sum is"</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<p>以下のコードの2つのprint文を1つにまとめ，"2 to the 20th power is [結果]"と表示されるようにしなさい．</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"2 to the 20th power is"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">**</span> <span class="token number">20</span><span class="token punctuation">)</span>
 </code></pre><h3 id="第2節-コメントアウト">第2節 コメントアウト </h3>
 <h4 id="21-コメントの使い方">2.1 コメントの使い方 </h4>
 <p>コメントはコード内にメモや説明を追加するために使用します．コメントはPythonのインタープリタに無視され，コードの実行に影響を与えません．</p>
@@ -181,7 +179,7 @@
 <p>シングルラインコメントは，行の先頭に <code>#</code> を付けて作成します．</p>
 <h5 id="example1_03py">example1_03.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># This is a single-line comment</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span> 
 </code></pre><h5 id="マルチラインコメント">マルチラインコメント </h5>
 <p>複数行のコメントは，連続する <code>#</code> で作成するか，ドキュメンテーション文字列として <code>"""</code> を使用して作成できます．</p>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token triple-quoted-string string">"""
@@ -199,6 +197,7 @@ count <span class="token operator">=</span> <span class="token number">0</span> 
     count <span class="token operator">+=</span> <span class="token number">1</span>  <span class="token comment"># カウンタを1増やします</span>
 
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>
+<span class="token comment">#=&gt; 10</span>
 </code></pre><h4 id="節末問題-1">節末問題 </h4>
 <h5 id="question1_02py">question1_02.py </h5>
 <p>次のコードをコピー＆ペーストし，適当な部分をコメントアウトして実行せよ．</p>
@@ -215,8 +214,9 @@ total <span class="token operator">=</span> <span class="token number">0</span>
 <p>以下の条件に従ってプログラムを作成しなさい．</p>
 <ol>
 <li>画面に"Hello, World!"と表示させる．</li>
-<li>2つの異なる数値をPrint関数を使用して表示させる．</li>
+<li>2つの異なる数値をprint関数を使用して表示させる．</li>
 <li>これらの数値の和について，"The total is: [合計値]"と表示させる．</li>
+<li>プログラムの中に「これは章末問題です」というメモ書き（コメントアウト）をせよ．</li>
 </ol>
 <hr>
 <h2 id="第2章-数値計算と変数の型外部からの入力">第2章 数値計算と変数の型，外部からの入力 </h2>
@@ -228,8 +228,8 @@ total <span class="token operator">=</span> <span class="token number">0</span>
 </code></pre><h4 id="12-剰余演算と整数除算">1.2 剰余演算と整数除算 </h4>
 <p>剰余演算は<code>%</code>，整数除算は<code>//</code>を使います．</p>
 <h5 id="example2_02py">example2_02.py </h5>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">%</span> <span class="token number">3</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">//</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">%</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment"># 3で割った余りを求める</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">//</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment"># 3で割った商を求める</span>
 </code></pre><h4 id="13-累乗">1.3 累乗 </h4>
 <ul>
 <li><strong>累乗</strong>: <code>**</code> 演算子を使用して，数値の累乗を計算します．</li>
@@ -252,15 +252,15 @@ total <span class="token operator">=</span> <span class="token number">0</span>
 <p>プログラミングにおいて，変数はデータを一時的に保存するための「箱」のようなものです．この箱に値を入れておくことで，計算や処理を行う際にその値を何度でも利用できるようになります．</p>
 <p>Pythonでは，変数は特定の型（データの種類）を持ちます．基本的な型には以下のものがあります．</p>
 <ul>
-<li><strong>整数型</strong> (<code>int</code>)</li>
-<li><strong>浮動小数点型</strong> (<code>float</code>)</li>
-<li><strong>文字列型</strong> (<code>str</code>)</li>
+<li><strong>整数型</strong>　: <code>int</code>　 （integer）</li>
+<li><strong>実数型</strong>　: <code>float</code> （float（浮動小数点数））</li>
+<li><strong>文字列型</strong>: <code>str</code>　 （string）</li>
 </ul>
 <p>変数を使うためには，まず変数に値を代入します．Pythonでは，<code>=</code>を使って，変数に値を代入します．</p>
 <h5 id="example2_04py">example2_04.py </h5>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token number">10</span>         <span class="token comment"># int</span>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token number">10</span>          <span class="token comment"># int</span>
 pi <span class="token operator">=</span> <span class="token number">3.14</span>       <span class="token comment"># float</span>
-name <span class="token operator">=</span> <span class="token string">"John"</span>  <span class="token comment"># str</span>
+name <span class="token operator">=</span> <span class="token string">"John"</span>   <span class="token comment"># str</span>
 
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x <span class="token operator">**</span> <span class="token number">2</span> <span class="token operator">*</span> pi<span class="token punctuation">)</span>
@@ -276,9 +276,9 @@ number_str <span class="token operator">=</span> <span class="token string">"5"<
 <p>データ型を明示的に変換することができます．変数に保存されているデータ型を変換することで，別の形式で扱うことが可能になります．<br>
 Pythonでよく使われる型変換には，次のようなものがあります．</p>
 <ul>
-<li><strong>整数に変換</strong> (<code>int()</code>)</li>
-<li><strong>浮動小数点数に変換</strong> (<code>float()</code>)</li>
-<li><strong>文字列に変換</strong> (<code>str()</code>)</li>
+<li><strong>整数に変換</strong>　: (<code>int()</code>)</li>
+<li><strong>実数に変換</strong>　: (<code>float()</code>)</li>
+<li><strong>文字列に変換</strong>: (<code>str()</code>)</li>
 </ul>
 <h5 id="example2_06py">example2_06.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token string">"10"</span>
@@ -288,19 +288,19 @@ x <span class="token operator">=</span> <span class="token builtin">int</span><s
 </code></pre><h3 id="第3節-input関数の使い方">第3節 <code>input</code>関数の使い方 </h3>
 <h4 id="31-ユーザーからの入力">3.1 ユーザーからの入力 </h4>
 <p><code>input</code>関数を使って，ユーザーからの入力を受け取ることができます．入力は常に文字列として取得されます．</p>
-<h5 id="example2_05py-1">example2_05.py </h5>
+<h5 id="example2_07py">example2_07.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"What is your name? "</span><span class="token punctuation">)</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello, "</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"!"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello,"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
 </code></pre><h4 id="32-数値入力の処理">3.2 数値入力の処理 </h4>
 <p>数値を入力させたい場合，<code>int</code>や<code>float</code>を使ってデータ型を変換する必要があります．</p>
-<h5 id="example2_06py-1">example2_06.py </h5>
+<h5 id="example2_08py">example2_08.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>age <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter your age: "</span><span class="token punctuation">)</span>
 age <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>
 <span class="token comment"># ２行まとめて age = int(input("Enter your age: ")) としてもよい</span>
 
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Next year, you will be "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>age <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" years old."</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Next year, you will be"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>age <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">" years old."</span><span class="token punctuation">)</span>
 </code></pre><h4 id="節末問題-3">節末問題 </h4>
-<h5 id="question2_03py">question2_03.py </h5>
+<h5 id="question2_02py">question2_02.py </h5>
 <p>ユーザーに2つの数値を入力させ，それらの和を計算して表示するプログラムを作成しなさい．</p>
 <h3 id="章末問題-1">章末問題 </h3>
 <h5 id="practice2_01py">practice2_01.py </h5>
@@ -326,22 +326,20 @@ mixed_list <span class="token operator">=</span> <span class="token punctuation"
 <h5 id="example3_01py">example3_01.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">]</span>
 
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> 
 </code></pre><h5 id="example3_02py">example3_02.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">]</span>
-my_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">500</span>
+my_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">500</span>  <span class="token comment"># 要素の上書き</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre><h4 id="節末問題-4">節末問題 </h4>
 <h5 id="question3_01py">question3_01.py </h5>
 <p>以下の条件に従ってプログラムを作成しなさい．</p>
-<pre data-role="codeBlock" data-info="" class="language-text"><code> 1. リスト  = ["my", "name", "is", ""] を作成する．
- 2. 好きな文字列を入力させ，リストの要素 "" を置き換える．
- 3. リストを表示する．
-
- 出力例：
- 「名前を入力してください： 」
- my name is Ichiro 
+<pre data-role="codeBlock" data-info="" class="language-text"><code>1.リスト[1,2,8,4]を作成し，変数に格納する．
+2.リストを表示させる．
+3.リストの8を3に置き換える．
+4.再度リストを表示させる．
 </code></pre><h3 id="第2節-メソッド">第2節 メソッド </h3>
 <h4 id="21-メソッドの基本">2.1 メソッドの基本 </h4>
 <p>メソッドとは，オブジェクトに対して実行できる特定の操作や処理を定義した関数のようなものです．Pythonでは，リストはオブジェクトの一種であり，リストに対して使用できるメソッドが多数用意されています．</p>
@@ -350,22 +348,19 @@ my_list<span class="token punctuation">[</span><span class="token number">1</spa
 my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 my_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>  <span class="token comment"># append()メソッドを使ってリストに要素を追加</span>
 </code></pre><h4 id="22-代表的なメソッドの使い方">2.2 代表的なメソッドの使い方 </h4>
-<p><strong><code>append()</code></strong><br>
-<code>append()</code>メソッドは，リストの末尾に要素を追加します．</p>
+<p><strong><code>append()</code></strong> メソッドは，リストの末尾に要素を追加します．</p>
 <h5 id="example3_03py">example3_03.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># リストの末尾に要素を追加</span>
 numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 numbers<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> 
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>
-</code></pre><p><strong><code>remove()</code></strong><br>
-<code>remove()</code>メソッドは，リストから指定した要素を削除します．削除する要素がリストに複数存在する場合，最初に見つかった要素が削除されます．</p>
+</code></pre><p><strong><code>remove()</code></strong> メソッドは，リストから指定した要素を削除します．削除する要素がリストに複数存在する場合，最初に見つかった要素が削除されます．</p>
 <h5 id="example3_04py">example3_04.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># リストから要素を削除</span>
 fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">]</span>
 fruits<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span> 
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
-</code></pre><p><strong><code>count()</code></strong><br>
-<code>count()</code>メソッドは，リスト内に指定した要素がいくつ存在するかを数えて返します．</p>
+</code></pre><p><strong><code>count()</code></strong> メソッドは，リスト内に指定した要素がいくつ存在するかを数えて返します．</p>
 <h5 id="example3_05py">example3_05.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># リスト内の要素の数をカウント</span>
 letters <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span>
@@ -395,7 +390,7 @@ a_count <span class="token operator">=</span> letters<span class="token punctuat
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"You are an adult."</span><span class="token punctuation">)</span>
 </code></pre><p><strong>インデントについて</strong><br>
 Pythonでは，インデント（字下げ）が非常に重要です．条件分岐やループなどの構造では，インデントを使ってブロック（一連の処理のまとまり）を表現します．インデントが正しくないと，プログラムはエラーを出して実行されません．</p>
-<p>Pythonでは通常，タブキーを使ってインデントを入れますが，スペース4つ分でも構いません．どちらかに統一することが推奨されます．</p>
+<p>Pythonでは通常，<code>Tab</code>キーを使ってインデントを入れますが，スペース4つ分でも構いません．どちらかに統一することが推奨されます．</p>
 <p>例: インデントの重要性</p>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token number">10</span>
 <span class="token keyword keyword-if">if</span> x <span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
@@ -405,7 +400,7 @@ Pythonでは，インデント（字下げ）が非常に重要です．条件�
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token number">10</span>
 <span class="token keyword keyword-if">if</span> x <span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"xは5より大きい"</span><span class="token punctuation">)</span>  <span class="token comment"># インデントがないため，エラーが発生する</span>
-</code></pre><p>このように，タブキーで正しくインデントを入れることが，Pythonのコードを正しく書くためには重要です．特に条件分岐やループのような構造を使う際は注意してください．</p>
+</code></pre><p>このように，<code>Tab</code>キーで正しくインデントを入れることが，Pythonのコードを正しく書くためには重要です．特に条件分岐やループのような構造を使う際は注意してください．</p>
 <h4 id="12-条件式の書き方">1.2 条件式の書き方 </h4>
 <p>条件式には，比較演算子や論理演算子を使用して複雑な条件を指定することができます．</p>
 <h5 id="比較演算子">比較演算子 </h5>
