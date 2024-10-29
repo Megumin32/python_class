@@ -24,7 +24,7 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="pythonプログラミングbasic_ver14">Pythonプログラミングbasic_ver1.4 </h1>
+<h1 id="pythonプログラミングbasic_ver15">Pythonプログラミングbasic_ver1.5 </h1>
 <h2 id="はじめに">はじめに </h2>
 <p>このテキストは，プログラミングの基礎を学ぶためのものです．初めてのプログラミングは難しく感じるかもしれませんが，一歩ずつ進めば習得できます．基本から応用まで順を追って学び，プログラムを動かす楽しさを体験してください．自分のペースで学び，疑問があれば周りに相談しながら進んでいきましょう．この学びが，皆さんの未来につながることを願っています．</p>
 <hr>
@@ -298,7 +298,7 @@ x <span class="token operator">=</span> <span class="token builtin">int</span><s
 age <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>
 <span class="token comment"># ２行まとめて age = int(input("Enter your age: ")) としてもよい</span>
 
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Next year, you will be"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>age <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">" years old."</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Next year, you will be"</span><span class="token punctuation">,</span> age <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">" years old."</span><span class="token punctuation">)</span>
 </code></pre><h4 id="節末問題-3">節末問題 </h4>
 <h5 id="question2_02py">question2_02.py </h5>
 <p>ユーザーに2つの数値を入力させ，それらの和を計算して表示するプログラムを作成しなさい．</p>
@@ -332,7 +332,7 @@ mixed_list <span class="token operator">=</span> <span class="token punctuation"
 </code></pre><h5 id="example3_02py">example3_02.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">]</span>
 my_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">500</span>  <span class="token comment"># 要素の上書き</span>
-<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>
 </code></pre><h4 id="節末問題-4">節末問題 </h4>
 <h5 id="question3_01py">question3_01.py </h5>
 <p>以下の条件に従ってプログラムを作成しなさい．</p>
@@ -367,19 +367,20 @@ letters <span class="token operator">=</span> <span class="token punctuation">[<
 a_count <span class="token operator">=</span> letters<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span> 
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a_count<span class="token punctuation">)</span>
 </code></pre><p>他にも<code>insert</code>，<code>pop</code>，<code>sort</code>などのメソッドがあります．興味があれば調べてみましょう．</p>
-<h3 id="章末問題-2">章末問題 </h3>
+<h4 id="節末問題-5">節末問題 </h4>
+<h5 id="question3_02py">question3_02.py </h5>
+<p>以下の条件に従ってプログラムを作成しなさい．</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>1.リスト["ant", "bat", "bag" "cat", ]を作成し，変数に格納する．
+2.リストを表示させる．
+3.リストに "dog" を追加する．
+4.リストから "bag" を削除する．
+5.再度リストを表示する．
+</code></pre><h3 id="章末問題-2">章末問題 </h3>
 <h5 id="practice3_01py">practice3_01.py </h5>
-<p>リスト <code>fruits</code> に含まれる特定のフルーツ（例: "apple"）がいくつ含まれているかを数え，その数を出力しなさい．また，そのフルーツをリストからすべて削除しなさい．</p>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 例:</span>
-<span class="token comment"># fruits = ["apple", "banana", "apple", "cherry", "banana", "apple"]</span>
-<span class="token comment"># 出力: 3</span>
-<span class="token comment"># 修正後のリスト: ["banana", "cherry", "banana"]</span>
-</code></pre><h5 id="practice3_02py">practice3_02.py </h5>
-<p>リスト <code>words</code> に対して，各単語の長さを計算し，それをリスト <code>lengths</code> に格納しなさい．次に，<code>words</code> リストをその長さに従って昇順に並べ替え，並べ替えた結果を出力しなさい．</p>
-<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 例:</span>
-<span class="token comment"># words = ["apple", "banana", "pear", "grape"]</span>
-<span class="token comment"># 出力: ["pear", "apple", "grape", "banana"]</span>
-</code></pre><hr>
+<p>空のリスト fruits を作成し，ユーザーに果物の名前を3回入力させて，リストに追加してください．最後に，fruits リストを表示してください．</p>
+<h5 id="practice3_02py">practice3_02.py </h5>
+<p>10つの整数値からなるリストを作成してください．その後，ユーザーに調べたい数を入力させ，リスト内にその数がいくつあるかを調べ、"〇〇はリストに△回あります" と出力してください．</p>
+<hr>
 <h2 id="第4章-条件分岐">第4章 条件分岐 </h2>
 <h3 id="第1節-if文の基本">第1節 if文の基本 </h3>
 <h4 id="11-if文の使い方">1.1 if文の使い方 </h4>
@@ -426,7 +427,7 @@ is_student <span class="token operator">=</span> <span class="token boolean">Tru
 
 <span class="token keyword keyword-if">if</span> age <span class="token operator">&gt;=</span> <span class="token number">18</span> <span class="token keyword keyword-and">and</span> <span class="token keyword keyword-not">not</span> is_student<span class="token punctuation">:</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"You are an adult and not a student."</span><span class="token punctuation">)</span>
-</code></pre><h4 id="節末問題-5">節末問題 </h4>
+</code></pre><h4 id="節末問題-6">節末問題 </h4>
 <h5 id="question4_01py">question4_01.py </h5>
 <p>ユーザーに数値を入力させ，その数が5の倍数であれば「5の倍数です」と表示するプログラムを作成しなさい．</p>
 <h3 id="第2節-if-else文">第2節 if-else文 </h3>
@@ -439,7 +440,7 @@ age <span class="token operator">=</span> <span class="token number">16</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"You are an adult."</span><span class="token punctuation">)</span>
 <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"You are a minor."</span><span class="token punctuation">)</span>
-</code></pre><h4 id="節末問題-6">節末問題 </h4>
+</code></pre><h4 id="節末問題-7">節末問題 </h4>
 <h5 id="question4_02py">question4_02.py </h5>
 <p>ユーザーに成績を入力させ，80点以上は「合格」，それ以外は「不合格」と表示するプログラムを作成しなさい．</p>
 <h3 id="第3節-if-elif-else文">第3節 if-elif-else文 </h3>
@@ -456,7 +457,7 @@ score <span class="token operator">=</span> <span class="token number">75</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span>
 <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"F"</span><span class="token punctuation">)</span>
-</code></pre><h4 id="節末問題-7">節末問題 </h4>
+</code></pre><h4 id="節末問題-8">節末問題 </h4>
 <h5 id="question4_03py">question4_03.py </h5>
 <p>ユーザーに2つの数値を入力させ，その両方が正の数であれば「両方とも正の数です」，どちらか一方が正の数であれば「少なくとも1つは正の数です」，それ以外の場合は「どちらも正の数ではありません」と表示するプログラムを作成しなさい．</p>
 <h3 id="章末問題-3">章末問題 </h3>
@@ -495,7 +496,7 @@ score <span class="token operator">=</span> <span class="token number">75</span>
 fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">]</span>
 <span class="token keyword keyword-for">for</span> fruit <span class="token keyword keyword-in">in</span> fruits<span class="token punctuation">:</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>fruit<span class="token punctuation">)</span>
-</code></pre><h4 id="節末問題-8">節末問題 </h4>
+</code></pre><h4 id="節末問題-9">節末問題 </h4>
 <h5 id="question5_01py">question5_01.py </h5>
 <p>1から10までの数の2乗を順に表示するプログラムを作成しなさい．</p>
 <h3 id="第2節-while文">第2節 while文 </h3>
@@ -516,7 +517,7 @@ i <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token keyword keyword-while">while</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">:</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
     i <span class="token operator">+=</span> <span class="token number">1</span>
-</code></pre><h4 id="節末問題-9">節末問題 </h4>
+</code></pre><h4 id="節末問題-10">節末問題 </h4>
 <h5 id="question5_02py">question5_02.py </h5>
 <p>ユーザーが入力した数値が0以上であれば，その数値を表示し続け，負の数値が入力されたらループを終了するプログラムを作成しなさい．</p>
 <h3 id="第3節-無限ループとループの終了">第3節 無限ループとループの終了 </h3>
@@ -535,7 +536,7 @@ i <span class="token operator">=</span> <span class="token number">1</span>
     <span class="token keyword keyword-if">if</span> i <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
         <span class="token keyword keyword-break">break</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-</code></pre><h3 id="節末問題-10">節末問題 </h3>
+</code></pre><h3 id="節末問題-11">節末問題 </h3>
 <h5 id="question5_03py">question5_03.py </h5>
 <p>1から10までの数字を順に表示しますが，偶数の場合はスキップして表示しないようにプログラムを修正しなさい．</p>
 <h3 id="章末問題-4">章末問題 </h3>
@@ -564,7 +565,7 @@ greet<span class="token punctuation">(</span><span class="token punctuation">)</
 result <span class="token operator">=</span> add_numbers<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
 <span class="token comment"># print(add_numbers(5, 3)) でも同じ</span>
-</code></pre><h4 id="節末問題-11">節末問題 </h4>
+</code></pre><h4 id="節末問題-12">節末問題 </h4>
 <h5 id="question6_01py">question6_01.py </h5>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># 次の関数`multiply`を完成させ，2つの数値を掛け合わせた結果を返すようにしなさい．</span>
 <span class="token keyword keyword-def">def</span> <span class="token function">multiply</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -593,7 +594,7 @@ my_function<span class="token punctuation">(</span><span class="token punctuatio
 
 my_function<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Global variable:"</span><span class="token punctuation">,</span> global_var<span class="token punctuation">)</span>  <span class="token comment"># 10と表示されます</span>
-</code></pre><h4 id="節末問題-12">節末問題 </h4>
+</code></pre><h4 id="節末問題-13">節末問題 </h4>
 <h5 id="question6_02py">question6_02.py </h5>
 <p>次のコードを修正して，関数<code>update_value()</code>内でグローバル変数<code>value</code>の値を更新するようにしなさい．</p>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code>value <span class="token operator">=</span> <span class="token number">100</span>
@@ -650,7 +651,7 @@ result <span class="token operator">=</span> math<span class="token punctuation"
 <span class="token comment"># 数学関数の使用例</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>ceil<span class="token punctuation">(</span><span class="token number">4.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 5と表示されます</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span><span class="token number">4.8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 4と表示されます</span>
-</code></pre><h4 id="節末問題-13">節末問題 </h4>
+</code></pre><h4 id="節末問題-14">節末問題 </h4>
 <h5 id="question7_01py">question7_01.py </h5>
 <p><code>math</code>モジュールを使用して，角度30度のサイン値を計算し，その結果を表示するプログラムを作成しなさい．</p>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> math
@@ -671,7 +672,7 @@ result <span class="token operator">=</span> math<span class="token punctuation"
 <span class="token comment"># リストからランダムな要素を選択</span>
 fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">]</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>fruits<span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre><h4 id="節末問題-14">節末問題 </h4>
+</code></pre><h4 id="節末問題-15">節末問題 </h4>
 <h5 id="question7_02py">question7_02.py </h5>
 <p><code>random</code>モジュールを使用して，1から6までのランダムな数値を生成し，それを表示するプログラムを作成しなさい．</p>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> random
@@ -724,7 +725,7 @@ results <span class="token operator">=</span> <span class="token punctuation">[<
 
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Results: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Average roll: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span> <span class="token operator">/</span> trials<span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre><h4 id="節末問題-15">節末問題 </h4>
+</code></pre><h4 id="節末問題-16">節末問題 </h4>
 <h5 id="question8_01py">question8_01.py </h5>
 <p>サイコロを50回振って，3の目が出る回数を数えるシミュレーションプログラムを作成しなさい．</p>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> random
@@ -760,7 +761,7 @@ rolls <span class="token operator">=</span> <span class="token punctuation">[</s
 
 <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Side "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">": "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>rolls<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" times"</span><span class="token punctuation">)</span>
-</code></pre><h4 id="節末問題-16">節末問題 </h4>
+</code></pre><h4 id="節末問題-17">節末問題 </h4>
 <h5 id="question8_02py">question8_02.py </h5>
 <p>コインを100回投げて，表が出た回数を数えるシミュレーションを行い，その結果を表示しなさい．</p>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> random
