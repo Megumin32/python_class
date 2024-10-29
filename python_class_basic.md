@@ -1,4 +1,4 @@
-# Pythonプログラミングbasic_ver1.4
+# Pythonプログラミングbasic_ver1.5
 
 ## はじめに
 
@@ -334,7 +334,7 @@ age = input("Enter your age: ")
 age = int(age)
 # ２行まとめて age = int(input("Enter your age: ")) としてもよい
 
-print("Next year, you will be", str(age + 1), " years old.")
+print("Next year, you will be", age + 1, " years old.")
 ```
 
 #### 節末問題
@@ -389,7 +389,7 @@ print(my_list[3] + 1)
 ``` python
 my_list = [10, 20, 30, 40]
 my_list[1] = 500  # 要素の上書き
-print(my_list[1])
+print(my_list)
 ```
 
 #### 節末問題
@@ -450,24 +450,25 @@ print(a_count)
 
 他にも`insert`，`pop`，`sort`などのメソッドがあります．興味があれば調べてみましょう．
 
+#### 節末問題
+
+##### question3_02.py
+以下の条件に従ってプログラムを作成しなさい．
+```
+1.リスト["ant", "bat", "bag" "cat", ]を作成し，変数に格納する．
+2.リストを表示させる．
+3.リストに "dog" を追加する．
+4.リストから "bag" を削除する．
+5.再度リストを表示する．
+```
+
 ### 章末問題
 
 ##### practice3_01.py
-リスト `fruits` に含まれる特定のフルーツ（例: "apple"）がいくつ含まれているかを数え，その数を出力しなさい．また，そのフルーツをリストからすべて削除しなさい．
-``` python
-# 例:
-# fruits = ["apple", "banana", "apple", "cherry", "banana", "apple"]
-# 出力: 3
-# 修正後のリスト: ["banana", "cherry", "banana"]
-```
+空のリスト fruits を作成し，ユーザーに果物の名前を3回入力させて，リストに追加してください．最後に，fruits リストを表示してください．
 
 ##### practice3_02.py
-リスト `words` に対して，各単語の長さを計算し，それをリスト `lengths` に格納しなさい．次に，`words` リストをその長さに従って昇順に並べ替え，並べ替えた結果を出力しなさい．
-``` python
-# 例:
-# words = ["apple", "banana", "pear", "grape"]
-# 出力: ["pear", "apple", "grape", "banana"]
-```
+10つの整数値からなるリストを作成してください．その後，ユーザーに調べたい数を入力させ，リスト内にその数がいくつあるかを調べ、"〇〇はリストに△回あります" と出力してください．
 
 ---
 
