@@ -1,4 +1,4 @@
-# Pythonプログラミングbasic_ver1.5
+# Pythonプログラミングbasic_ver1.7
 
 ## はじめに
 
@@ -334,7 +334,7 @@ age = input("Enter your age: ")
 age = int(age)
 # ２行まとめて age = int(input("Enter your age: ")) としてもよい
 
-print("Next year, you will be", age + 1, " years old.")
+print("Next year, you will be", age + 1, "years old.")
 ```
 
 #### 節末問題
@@ -413,7 +413,7 @@ print(my_list)
 ``` python
 # メソッドの呼び出し例
 my_list = [1, 2, 3]
-my_list.append(4)  # append()メソッドを使ってリストに要素を追加
+my_list.append(4) #my_listに対してappend()メソッドを呼び出している
 ```
 
 #### 2.2 代表的なメソッドの使い方
@@ -455,7 +455,7 @@ print(a_count)
 ##### question3_02.py
 以下の条件に従ってプログラムを作成しなさい．
 ```
-1.リスト["ant", "bat", "bag" "cat", ]を作成し，変数に格納する．
+1.リスト["ant", "bat", "bag", "cat"]を作成し，変数に格納する．
 2.リストを表示させる．
 3.リストに "dog" を追加する．
 4.リストから "bag" を削除する．
@@ -514,8 +514,8 @@ print("xは5より大きい")  # インデントがないため，エラーが�
 
 - **`==`**: 等しい
 - **`!=`**: 等しくない
-- **`>`**: より大きい
-- **`<`**: より小さい
+- **`> `**: より大きい
+- **`< `**: より小さい
 - **`>=`**: 以上
 - **`<=`**: 以下
 
@@ -524,14 +524,13 @@ print("xは5より大きい")  # インデントがないため，エラーが�
 Pythonには，複数の条件を組み合わせて判定を行うための論理演算子があります．主に以下の3つが使用されます．
 
 - **`and`**: すべての条件が真（True）の場合にのみ真を返します．
-- **`or`**: 少なくとも1つの条件が真（True）の場合に真を返します．
+- **`or `**: 少なくとも1つの条件が真（True）の場合に真を返します．
 - **`not`**: 条件の真偽を反転させます．
 
 ##### example4_02.py
 ``` python
-# 「ageが18以上」かつ「is_studentがTrueではない」場合に「大人であり生徒でない」を表示します
 age = 20
-is_student = True
+is_student = True # boolean型: TrueかFalseいずれかの状態を表す
 
 if age >= 18 and not is_student:
     print("You are an adult and not a student.")
@@ -551,7 +550,6 @@ if age >= 18 and not is_student:
 
 ##### example4_03.py
 ``` python
-# ageが18以上なら大人，そうでなければ子どもを表示します
 age = 16
 if age >= 18:
     print("You are an adult.")
@@ -572,7 +570,6 @@ else:
 
 ##### example4_04.py
 ``` python
-# scoreの大きさに応じていずれかの評価を表示します
 score = 75
 if score >= 90:
     print("A")
@@ -593,7 +590,7 @@ else:
 
 ##### practice4_01.py
 ユーザーに年齢，収入，住居を持っているかどうかを尋ね，以下の条件に従って結果を表示するプログラムを作成しなさい．
-- 25歳以上かつ収入が400以上または住居を持っている場合，「ローンの対象です」と表示する．
+- 25歳以上かつ，収入が400以上または住居を持っている場合，「ローンの対象です」と表示する．
 - それ以外の場合，「ローンの対象ではありません」と表示する．
   
 ##### practice4_02.py
@@ -607,14 +604,18 @@ else:
 
 #### 1.1 for文の基本構造
 
+
 `for`文を使用すると，指定した範囲やリストの要素を繰り返し処理することができます．
 
 ##### example5_01.py
 ``` python
-# 1から5までの数字を順に表示します
-for i in range(1, 6):
-    print(i)
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
 ```
+
+#### 1.2 `range()`関数を用いた反復構造
+
 **`range()`の使い方**
 `range()`関数には，指定する引数によって異なる動作をさせることができます．
 
@@ -622,26 +623,16 @@ for i in range(1, 6):
 `range(start, stop)`：startからstopの手前までの連続した整数を生成します．
 `range(start, stop, step)`：startからstopの手前まで，stepの間隔で整数を生成します．
 
-``` python
-# 2から6までの数値を順番に処理
-for i in range(2, 7):
-    print(i)
-```
-``` python
-# 0から10までの数値を2ずつ増やして処理
-for i in range(0, 11, 2):
-    print(i)
-```
-#### 1.2 リストを使った繰り返し
-
-リストを使って，`for`文で複数の要素を順に処理することもできます．
-
 ##### example5_02.py
 ``` python
-# リスト内のすべてのフルーツを表示します
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    print(fruit)
+for i in range(6):
+    print(i)
+
+for i in range(2, 7):
+    print(i)
+
+for i in range(0, 11, 2):
+    print(i)
 ```
 
 #### 節末問題
@@ -657,7 +648,6 @@ for fruit in fruits:
 
 ##### example5_03.py
 ``` python
-# 1から5までの数字を順に表示します
 i = 1
 while i <= 5:
     print(i)
@@ -670,7 +660,6 @@ while i <= 5:
 
 ##### example5_04.py
 ``` python
-# ユーザーが指定した数値まで繰り返し処理を行います
 n = int(input("Enter a number: "))
 i = 1
 while i <= n:
@@ -691,29 +680,10 @@ while i <= n:
 
 ##### example5_05.py
 ``` python
-# 条件が変わらない限り，無限にループします
 while True:
     print("This is an infinite loop. Press Ctrl+C to stop.")
     break  # 無限ループを防ぐために追加
 ```
-
-#### 3.2 ループの終了条件
-
-`break`文や`continue`文を使用して，ループの終了条件を設定します．
-
-##### example5_06.py
-``` python
-# 1から10までの数字を順に表示しますが，5になったらループを終了します
-for i in range(1, 11):
-    if i == 5:
-        break
-    print(i)
-```
-
-### 節末問題
-
-##### question5_03.py
-1から10までの数字を順に表示しますが，偶数の場合はスキップして表示しないようにプログラムを修正しなさい．
 
 ### 章末問題
 
@@ -784,32 +754,17 @@ my_function()
 
 #### 2.2 グローバル変数の定義
 
-グローバル変数は関数の外部で定義され，プログラム全体でアクセス可能です．ただし，関数内でグローバル変数を変更する場合は，`global`キーワードを使用する必要があります．
+グローバル変数は関数の外部で定義され，プログラム全体でアクセス可能です．
 
 ##### example6_04.py
 ``` python
 global_var = 5
 
 def my_function():
-    global global_var
-    global_var = 10
+    print("Global variable:", global_var)
 
 my_function()
-print("Global variable:", global_var)  # 10と表示されます
-```
-
-#### 節末問題
-
-##### question6_02.py
-次のコードを修正して，関数`update_value()`内でグローバル変数`value`の値を更新するようにしなさい．
-``` python
-value = 100
-
-def update_value():
-    # ここにコードを追加
-
-update_value()
-print(value)
+print("Global variable:", global_var)
 ```
 
 ### 章末問題
