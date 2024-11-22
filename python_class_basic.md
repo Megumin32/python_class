@@ -1,4 +1,4 @@
-# Pythonプログラミングbasic_ver1.7
+# Pythonプログラミングbasic_ver1.8
 
 ## はじめに
 
@@ -648,42 +648,25 @@ for i in range(0, 11, 2):
 
 ##### example5_03.py
 ``` python
-i = 1
+i = 1 # 初期条件
 while i <= 5:
     print(i)
-    i += 1  # 「i = i + 1」と書いても同じ
+    i = i + 1
 ```
-
-#### 2.2 ループの条件設定
-
-`while`文を使用する際の条件設定やループの制御方法を学びます．
 
 ##### example5_04.py
 ``` python
-n = int(input("Enter a number: "))
+n = int(input("Enter a number: ))
 i = 1
-while i <= n:
-    print(i)
-    i += 1
+while i ** n < 10000:
+    print(i ** n)
+    i += 1 # i = i + 1 と同じ
 ```
 
 #### 節末問題
 
 ##### question5_02.py
-ユーザーが入力した数値が0以上であれば，その数値を表示し続け，負の数値が入力されたらループを終了するプログラムを作成しなさい．
-
-### 第3節 無限ループとループの終了
-
-#### 3.1 無限ループの対策
-
-無限ループは，プログラムが終了しない状態を指します．これを避けるための方法を学びます．
-
-##### example5_05.py
-``` python
-while True:
-    print("This is an infinite loop. Press Ctrl+C to stop.")
-    break  # 無限ループを防ぐために追加
-```
+自然数の正の平方根で，その値が5を越えないものをすべて表示するプログラムを作成しなさい．
 
 ### 章末問題
 
@@ -719,9 +702,7 @@ greet()
 def add_numbers(a, b):
     return a + b
 
-result = add_numbers(5, 3)
-print(result)
-# print(add_numbers(5, 3)) でも同じ
+print(add_numbers(5, 3))
 ```
 
 #### 節末問題
@@ -732,8 +713,7 @@ print(result)
 def multiply(x, y):
     # ここにコードを追加
 
-result = multiply(6, 7)
-print(result)
+priint(multiply(6, 7))
 ```
 
 ### 第2節 ローカル変数とグローバル変数
