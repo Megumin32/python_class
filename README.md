@@ -1,10 +1,10 @@
 # Pythonプログラミング教材集
 
-このリポジトリは，高等学校情報Iのプログラミングの授業用テキストの置き場です．必要に応じて授業などで活用ください．
+このリポジトリは，高等学校情報のプログラミングの授業用テキストの置き場です．必要に応じて授業などで活用ください．
 
 ## Python基礎編テキスト
-**python_class_basic.md**
-**python_class_basic_exercise.md**
+**informaticsI_python.md**
+**informaticsI_python_exercise.md**
 
 以下の内容で構成されています．
 
