@@ -727,18 +727,19 @@ print(math.factorial(5))
 #### 節末問題
 
 ##### question7_01.py
-`math`モジュールを用いずに，ユーザに数値を入力させ，その数値の絶対値を表示するプログラムを作成しなさい．
+`math`モジュールを使わないで 10 P 7 の値を計算しなさい．
 ``` python
-number = int(input("数値を入力して下さい"))
-# numberが非負であればそのまま表示する
-# numberが負であれば(-1)をかけた値を表示する
+n = 10
+k = 7
+
 ```
 
-##### question7.02_py
-`math`モジュールの`abs()`関数を用いて，「**question7_01.py**」の問題を書き換えなさい．
+##### question7_02.py
+`math`モジュールの`parm()`関数を用いて，「**question7_01.py**」の問題を書き換えなさい．
 ``` python
 import math
-number = int(input("数値を入力して下さい"))
+n = 10
+k = 7
 # ここにコードを追加
 ```
 ### 第3節 randomモジュール
