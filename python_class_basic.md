@@ -616,7 +616,7 @@ print(add_numbers(5, 3))
 def multiply(x, y):
     # ここにコードを追加
 
-priint(multiply(6, 7))
+print(multiply(6, 7))
 ```
 
 ### 第2節 ローカル変数とグローバル変数
@@ -660,7 +660,6 @@ def check_even_odd(number):
 
 check_even_odd(4)  # 出力: 4は偶数です
 check_even_odd(7)  # 出力: 7は奇数です
-
 ```
 
 ##### practice6_02.py
