@@ -731,7 +731,7 @@ print(math.factorial(5))
 ``` python
 n = 10
 k = 7
-
+#ここにコードを追加
 ```
 
 ##### question7_02.py
