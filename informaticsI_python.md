@@ -256,14 +256,9 @@ print("The price is ¥", 200 * quantity)
 リストは，`[]`（角括弧）で囲んで，要素をカンマ（`,`）で区切ることで作成します．
 
 ``` python
-# 空のリストを作成
-empty_list = []
-
-# 複数の要素を持つリストを作成
+empty_list = [] # 空のリスト
 numbers = [1, 2, 3, 4, 5]
-
-# 異なるデータ型を持つ要素を含むリストを作成
-mixed_list = [1, "apple", 3.14, True] #それぞれ int str float boolean
+fluits = ["apple", "banana", "cherry"]
 ```
 
 #### 1.2 要素へのアクセス
@@ -441,7 +436,7 @@ Pythonには，複数の条件を組み合わせて判定を行うための論�
 - **`or `**: 少なくとも1つの条件が真（True）の場合に真を返します．
 - **`not`**: 条件の真偽を反転させます．
 
-##### example4_02.py
+##### example4_03.py
 ``` python
 age = 20
 is_student = True # boolean型: TrueかFalseいずれかの状態を表す
@@ -453,10 +448,10 @@ if age >= 18 and not is_student:
 #### 節末問題
 
 ##### question4_01.py
-ユーザーに成績を入力させ，80点以上ならば「合格」と表示するプログラムを作成しなさい．
+ユーザーに成績を入力させ，80点以上ならば「合格」と表示するプログラムを作成してください．
 
 ##### question4_02.py
-ユーザーに文字列を入力させ，文字列の長さが10以上のとき「長すぎです」と表示するプログラムを作成しなさい．
+ユーザーに文字列を入力させ，文字列の長さが10以上のとき「長すぎです」と表示するプログラムを作成してください．
 ※文字列の長さは`len()`関数で求められます．
 例：
 ```python
@@ -478,7 +473,7 @@ else:
     処理（条件式が偽のときに実行される）
 ```
 
-##### example4_03.py
+##### example4_04.py
 ``` python
 age = 16
 if age >= 18:
@@ -491,10 +486,10 @@ else:
 #### 節末問題
 
 ##### question4_03.py
-ユーザーに成績を入力させ，80点以上ならば「合格」そうでなければ「不合格」と表示するプログラムを作成しなさい．
+ユーザーに成績を入力させ，80点以上ならば「合格」そうでなければ「不合格」と表示するプログラムを作成してください．
 
 ##### question4_04.py
-ユーザーに整数値を入力させ，その数が偶数か奇数かを判定し結果を表示しなさい．
+ユーザーに整数値を入力させ，その数が偶数か奇数かを判定し結果を表示してください．
 
 ### 第3節 if-elif-else文
 
@@ -515,7 +510,7 @@ else:
 
 ```
 
-##### example4_04.py
+##### example4_05.py
 ``` python
 age = 46
 if age < 18:
@@ -679,19 +674,21 @@ print("終わり")
 
 ##### example6_01.py
 ``` python
+# 関数greet()を定義する
 def greet():
     print("Hello, World!")
 
+# 関数greet()を実行する
 greet()
 ```
 
 #### 1.2 引数と戻り値
 
-関数には，引数を渡してその値を使用することができます．また，関数は処理の結果を戻り値として返すことができます．
+関数には，引数を渡してその値を使用することができます．また，`return` を記述することで，処理の結果を戻り値として返すことができます．
 
 ##### example6_02.py
 ``` python
-def add_numbers(a, b):
+def add_numbers(a, b): 
     return a + b
 
 print(add_numbers(5, 3))
@@ -700,8 +697,8 @@ print(add_numbers(5, 3))
 #### 節末問題
 
 ##### question6_01.py
+次の関数`multiply`を完成させ，2つの数値を掛け合わせた結果を返すようにしてください．
 ``` python
-# 次の関数`multiply`を完成させ，2つの数値を掛け合わせた結果を返すようにしてください．
 def multiply(x, y):
     # ここにコードを追加
 
@@ -710,35 +707,23 @@ priint(multiply(6, 7))
 
 ### 第2節 ローカル変数とグローバル変数
 
-#### 2.1 ローカル変数の定義
+#### 2.1 ローカル変数とグローバル変数
 
 ローカル変数は関数の内部で定義され，関数が終了すると消滅します．ローカル変数のスコープ（変数が使える範囲）は，その関数内に限られます．
+グローバル変数は関数の外部で定義され，プログラム全体でアクセス可能です．
 
 ##### example6_03.py
 ``` python
+g_var = 20 # グローバル変数
 def my_function():
-    local_var = 10
-    print("Local variable:", local_var)
+    l_var = 10 #ローカル変数
+    print("g_var,l_var")
 
-my_function()
-# print(local_var)  # エラー: local_varは関数外ではアクセスできません
+# 以下一つずつコメントアウトを解除して実行してみよう．
+# my_function()  
+# print(g_var)
+# print(l_var) 
 ```
-
-#### 2.2 グローバル変数の定義
-
-グローバル変数は関数の外部で定義され，プログラム全体でアクセス可能です．
-
-##### example6_04.py
-``` python
-global_var = 5
-
-def my_function():
-    print("Global variable:", global_var)
-
-my_function()
-print("Global variable:", global_var)
-```
-
 ### 章末問題
 
 ##### practice6_01.py
@@ -771,54 +756,40 @@ Pythonでは，プログラムが大きくなってくると，コードを整�
 
 モジュールとは，関数や変数，クラスなどをまとめたファイルのことです．Pythonのモジュールを使うと，1つのファイルに定義されたコードを他のファイルから簡単に再利用することができます．
 
-Pythonには多くの標準モジュールが用意されており，これを使うことで便利な機能を簡単に利用できるほか，独自のモジュールを作成して自分のコードを整理することも可能です．
+モジュールを使うためには，以下のようにモジュールをインポート（読み込む）する必要があります．
 
-モジュールを使うためには，まずそのモジュールをインポート（読み込む）する必要があります．モジュールのインポートは，Pythonのimport文を使って行います．
-
-``` python
-import math
-
-# mathモジュールを使って平方根を計算
-result = math.sqrt(16)
-print(result)  # 出力: 4.0
+``` python 
+import math    # mathモジュールを使う
+import random  # randomモジュールを使う
 ```
 
 ### 第2節 mathモジュール
 
 #### 2.1 mathモジュールの基本
 
-`math`モジュールには，数学に関連する多くの関数が含まれています．平方根や階乗，三角関数などを簡単に計算できます．
+`math`モジュールには，数学に関連する多くの関数が含まれています．平方根や階乗，三角関数などを簡単に計算できます．関数を覚える必要はなく，都度調べればOKです．
 
 ##### example7_01.py
 ``` python
 import math
 
 # 平方根の計算
-print(math.sqrt(25))  # 6.0と表示されます
+print(math.sqrt(25))  
+# => 5.0
 
 # 階乗の計算
-print(math.factorial(5))  # 120と表示されます
-```
-
-#### 2.2 よく使うmath関数
-
-`math`モジュールでよく使用される関数には，`sqrt()`, `factorial()`, `ceil()`, `floor()`, `sin()`, `cos()` などがあります．
-
-##### example7_02.py
-``` python
-import math
-
-# 数学関数の使用例
-print(math.ceil(4.2))  # 5と表示されます
-print(math.floor(4.8))  # 4と表示されます
+print(math.factorial(5))  
+# => 120
 ```
 
 #### 節末問題
 
 ##### question7_01.py
-`math`モジュールを使用して，角度30度のサイン値を計算し，その結果を表示するプログラムを作成してください．
+`math`モジュールの関数（など）を調べ，次の値を求めなさい．
+1. 円周率 π の値
+2. 2738と3473の最大公約数
 ``` python
-import math
+import math 
 # ここにコードを追加
 ```
 
@@ -834,11 +805,9 @@ import random
 
 # 1から10までのランダムな整数を生成
 print(random.randint(1, 10))
+# 0から1までのランダムな実数を生成
+print(random.random())
 ```
-
-#### 3.2 random関数の使い方
-
-`random`モジュールには，`randint()`, `random()`, `choice()`, `shuffle()` など，ランダム性を利用するための関数が用意されています．
 
 ##### example7_04.py
 ``` python
@@ -853,6 +822,13 @@ print(random.choice(fruits))
 
 ##### question7_02.py
 `random`モジュールを使用して，1から6までのランダムな数値を生成し，それを表示するプログラムを作成してください．
+``` python
+import random
+# ここにコードを追加
+```
+
+##### question7_03.py
+`random`モジュールを使用して，「グー」「チョキ」「パー」をランダムに表示するプログラムを作成してください．
 ``` python
 import random
 # ここにコードを追加
