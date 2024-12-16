@@ -855,7 +855,7 @@ money = 10000  # 元本
 rate = 0.05    # 利率
 year = 20      # 年数
 
-for i in range(1, year　+　1):
+for i in range(1, year + 1):
     money = money + money * rate
 
 money = int(money) # 小数点以下切り捨て
